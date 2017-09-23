@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			position: relative;
+		}
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.center{
+			width: 150px;
+			height: 150px;
+			background: #808080;
+			display: block;
+		}
+		img{
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		.rr{
+			transition: all ease 1s;
+			transition-delay: 1s;
+			left: 0;
+			top: 0;
+		}
+	</style>
+</head>
+<body>
+	<a href="" class="center">
+		<img src1="T1czW_BXCv1R4cSCrK.png" alt="">
+	</a>
+	<a href="" class="center">
+		<img src1="T1czW_BXCv1R4cSCrK.png" alt="">
+	</a>
+	<a href="" class="center">
+		<img src1="T1czW_BXCv1R4cSCrK.png" alt="">
+	</a>
+	<a href="" class="center">
+		<img src1="T1czW_BXCv1R4cSCrK.png" alt="">
+	</a>
+	<a href="" class="center">
+		<img src1="T1czW_BXCv1R4cSCrK.png" alt="">
+	</a>
+	<a href="" class="center">
+		<img src1="T1czW_BXCv1R4cSCrK.png" alt="">
+	</a>
+	<a href="" class="center">
+		<img src1="T1czW_BXCv1R4cSCrK.png" alt="">
+	</a>
+	<a href="" class="center">
+		<img src1="T1czW_BXCv1R4cSCrK.png" alt="">
+	</a>
+	<a href="" class="center">
+		<img src1="T1czW_BXCv1R4cSCrK.png" alt="">
+	</a>
+	<a href="" class="center">
+		<img src1="T1czW_BXCv1R4cSCrK.png" alt="">
+	</a>
+	<a href="" class="center">
+		<img src1="T1czW_BXCv1R4cSCrK.png" alt="">
+	</a>
+	<a href="" class="center">
+		<img src1="T1czW_BXCv1R4cSCrK.png" alt="">
+	</a>
+	<a href="" class="center">
+		<img src1="T1czW_BXCv1R4cSCrK.png" alt="">
+	</a>
+	<a href="" class="center">
+		<img src1="T1czW_BXCv1R4cSCrK.png" alt="">
+	</a>
+	<a href="" class="center">
+		<img src1="T1czW_BXCv1R4cSCrK.png" alt="">
+	</a>
+	<a href="" class="center">
+		<img src1="T1czW_BXCv1R4cSCrK.png" alt="">
+	</a>
+	<a href="" class="center">
+		<img src1="T1czW_BXCv1R4cSCrK.png" alt="">
+	</a>
+	<a href="" class="center">
+		<img src1="T1czW_BXCv1R4cSCrK.png" alt="">
+	</a>
+
+
+</body>
+</html>
+<script>
+     let win = window.innerHeight;
+     let center = document.querySelectorAll('a.center');
+    //  let imgs = document.querySelector('img');
+    // console.log(imgs);
+     let cen1 = [];
+     center.forEach((element,index)=>{
+     	let w = center[index].offsetTop;
+     	cen1.push(w);
+
+     })
+    window.onscroll = function (){
+    	let cen2 = document.body.scrollTop;
+    	cen1.forEach((element,index)=>{
+    		if(cen2+win>=element+100){
+    			let imgs = center[index].querySelector('img');
+    			console.log(imgs);
+                imgs.src=`${imgs.getAttribute('src1')}`;
+    		}
+    	})
+    }
+
+
+
+
+	//let a = document.querySelector('body');
+	
+	// function children1(a){
+ //       let ch = a.childNodes;
+ //       console.log(ch);
+ //       let arr = [];
+ //       ch.forEach(function(value){
+ //           if(value.nodeType==1){
+ //              arr.push(value);
+ //           }
+ //       })
+ //      console.log(arr);
+	// }
+	//children1(a);
+	
+
+
+
+	// function next(element,tagName){             //next函数
+	// 	let a1=element.parentNode;
+	// 	let childs = a1.children;
+	// 	let childss = Array.from(childs);
+	// 	let value = 0;
+	// 	for(let i = 0;i<childss.length;i++){
+	// 		if(childss[i]==element){
+ //                 value=i;
+	// 		}
+	// 	}
+	//    let sps = childss.splice(value+1);
+	//    for(let j=0;j<sps.length;j++){
+	//    	  if(sps[j].nodeName==tagName.toUpperCase()){
+	//    	  	return sps[j];
+	//    	  }
+	//    }
+	//    return null;
+	// }
+	 
+	// console.log(ss);
+	// function next (element,Tagname){
+ //        let parent = element.parentNode;
+ //        let child = parent.children;
+ //        let arr = Array.from(child);
+ //        let value1 = 0;
+ //        let j=0;
+ //        while(arr[j]!=element){
+ //        		value1=j;
+ //        	    j++;
+ //        }
+ //        console.log(value1);
+ //        // arr.forEach(function(value,index){
+ //        //     if(value == element){
+ //        //     	value1 = index;console.log(index);
+ //        //     }
+ //        // })
+ //        let spa = arr.splice(value1+1);
+ //        //console.log(Tagname.toUpperCase());
+ //        //console.log(spa);
+ //        let i = 0;
+ //        let spa1;
+ //        while(spa[i].nodeName!=Tagname.toUpperCase()){
+ //        		i++;
+ //        	}
+ //        	return spa[i];
+ //        }
+    //  function next(){
+    //  	let nexts = element.nextElementSibling;
+
+    //  }   
+    
+    // console.log(nexts);     
+	
+	//let ss = next(a,'span'); 
+	//console.log(ss);
+	// let box = document.querySelector('div');
+	// let divs = document.createElement('div');
+	// divs.style.width = '100px';
+	// divs.style.height = '100px';
+	// divs.style.background = 'red';
+ //    box.appendChild(divs);
+    // function adds(element,num){
+    //   for(let i = 0;i<num;i++){
+    //   	let divs = document.createElement('div');
+    //   	let w = window.innerWidth;
+    //   	let h = window.innerHeight;
+    //   	console.log(h);
+    //   	let w1 = Math.floor(150*Math.random());
+    //   	divs.style.width=divs.style.height=`${w1}px`;
+    //   	let co1 = `${Math.floor(256*Math.random())}`;
+    //   	let co2 = `${Math.floor(256*Math.random())}`;
+    //   	let co3 = `${Math.floor(256*Math.random())}`;
+    //   	//console.log(co1);
+    //   	divs.style.borderRadius = '50%';
+    //   	divs.style.position = 'absolute';
+    //   	divs.style.background ='rgba('+co1+','+co2+','+co3+','+' 1.0)';
+    //   	divs.style.left = `${Math.floor((w-w1-1)*Math.random())}px`;
+    //   	divs.style.top = `${Math.floor((h-w1-1)*Math.random())}px`;
+    //   	element.appendChild(divs);
+    //   }
+    // }
+
+    // adds(a,20);
+    //deg*math.PI/180
+    // function circle(num,r){
+    // 	let deg = 360/num;
+    // 	console.log(Math.cos(deg*10*Math.PI/180)*10);
+    // 	let center = document.querySelector('.center');
+    //     for(let i = 0;i<num;i++){
+    //         let r1 = document.createElement('div.rr');
+    //         r1.className="rr";
+    //         r1.style.width = '30px';
+    //         r1.style.height = '30px';
+    //         let co1 = `${Math.floor(256*Math.random())}`;
+    //    	    let co2 = `${Math.floor(256*Math.random())}`;
+    //    	    let co3 = `${Math.floor(256*Math.random())}`;
+    //    	    r1.style.borderRadius = '50%';
+    //         r1.style.background = 'rgba('+co1+','+co2+','+co3+','+' 1.0)';
+    //         r1.style.position = 'absolute';
+    //         r1.style.transition = 'all ease 1s';
+    //         console.log(r1.style.left);
+    //         center.appendChild(r1);
+    //         setTimeout(function(){
+    //         	r1.style.transitionDelay = `${i*100}ms`;
+    //         	r1.style.left = `${Math.cos(deg*i*Math.PI/180)*r-5}px`;
+    //             r1.style.top = `${Math.sin(deg*i*Math.PI/180)*r-5}px`;
+    //         },1000);
+    //     }
+    // }
+    // circle(20,200);
+    // let p = document.querySelector('div');
+    // let div = document.createElement('div');
+    // HTMLElement.prototype.behind = function(element){
+    // 	let next = this.nextSibling;
+    // 	let parent = this.parentNode;
+    //     if(next){
+    //         parent.insertBefore(element,next);
+    //     }else{
+    //     	parent.appendChild(element);
+    //     }
+
+    // }
+    // HTMLElement.prototype.qian = function(element){
+    // 	let next = this.firstChild;
+    // 	//let parent = this.parentNode;
+    //     if(next){
+    //         this.insertBefore(element,next);
+    //     }else{
+    //     	this.appendChild(element);
+    //     }
+
+    // }
+    // p.qian(div);
+    // window.onload = function(){
+    // 	window.onscroll = function(){
+    // 		console.log(document.body.scrollTop);
+    // 		console.log(document.documentElement.scrollTop);
+    // 	}
+    // }
+</script>
