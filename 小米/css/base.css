@@ -1,0 +1,19 @@
+/*
+* @Author: shuangshuang
+* @Date:   2017-08-17 16:05:01
+* @Last Modified by:   shuangshuang
+* @Last Modified time: 2017-08-17 16:07:47
+*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: "微软雅黑","宋体",sans-serif;
+	}
+a{
+	text-decoration: none;
+
+}
+body{
+	background: #ffffff;
+}
