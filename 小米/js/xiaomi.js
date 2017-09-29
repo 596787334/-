@@ -2,7 +2,7 @@
 * @Author: shuangshuang
 * @Date:   2017-09-20 14:14:01
 * @Last Modified by:   shuangshuang
-* @Last Modified time: 2017-09-28 11:10:29
+* @Last Modified time: 2017-09-28 22:33:55
 */
  Tween = {  
     Linear: function(t,b,c,d){ return c*t/d+b; },
@@ -559,32 +559,42 @@ console.log(neiei);
 let zj = $('.zj');
 console.log(zj);
 let zj1 = $('.zj1');
-let nei1 = $('.nei1')[0];
-let now1 = 0;
-let next1 = 0;
 for(let i=0;i<zj1.length;i++){
+   let now1 = 0;
+   let next1 = 0;
    let nei1 = $('.nei1')[i];
-   let neiei = $('.neiei',nei1);
-   console.log(nei1);
+   let neiei = nei1.getElementsByClassName('neiei');
+   let neidian = $('.neidian')[i];
+   let neidiana = nei1.getElementsByClassName('neidiana');
+   neidiana[0].classList.add('neidiana1');
+   console.log(neidiana);
    zj1[i].onclick = function(){
    if(next1<3){
    next1++;
    animate(neiei[next1],{left:296});
    animate(neiei[now1],{left:-296});
    animate(neiei[next1],{left:0});
+   neidiana[now1].classList.remove('neidiana1');
+   neidiana[next1].classList.add('neidiana1');
    now1 = next1;}
-}}
-for(let i=0;i<zj.length;i++){
-   let nei1 = $('nei1')[i];
-   let neiei = $('.neiei',nei1);
- zj[i].onclick = function(){
+   }  
+zj[i].onclick = function(){
    if(next1>0){
    next1--;
    animate(neiei[next1],{left:-296});
    animate(neiei[now1],{left:296});
    animate(neiei[next1],{left:0});
+   neidiana[now1].classList.remove('neidiana1');
+   neidiana[next1].classList.add('neidiana1');
    now1 = next1;}
-}}
+}
+}
+// for(let i=0;i<zj.length;i++){
+//    let nei1 = $('nei1')[i];
+//    console.log(nei1);
+//    let neiei = nei1.getElementsByClassName('neiei');
+//    console.log(neiei);
+//  }
 
 
 
